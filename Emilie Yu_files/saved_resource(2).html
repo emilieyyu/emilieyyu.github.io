@@ -1,0 +1,317 @@
+
+<!-- saved from url=(0051)https://www.openprocessing.org/sketch/392704/embed/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Sketch Iframe</title><!--<base href="https://openprocessing-usercontent.s3.amazonaws.com/files/user71261/visual392704/h06ff1b77ee7286afc1ded4261500896e/">--><base href="."><link><link rel="stylesheet" href="./sketchIframe.css"><style type="text/css">@font-face {
+  font-family: "PjsEmptyFont";
+  src: url('data:application/x-font-ttf;base64,AAEAAAAKAIAAAwAgT1MvMgAAAAAAAAEoAAAAVmNtYXAAAAAAAAABiAAAACxnbHlmAAAAAAAAAbwAAAAkaGVhZAAAAAAAAACsAAAAOGhoZWEAAAAAAAAA5AAAACRobXR4AAAAAAAAAYAAAAAGbG9jYQAAAAAAAAG0AAAABm1heHAAAAAAAAABCAAAACBuYW1lAAAAAAAAAeAAAAAgcG9zdAAAAAAAAAIAAAAAEAABAAAAAQAAAkgTY18PPPUACwAgAAAAALSRooAAAAAAyld0xgAAAAAAAQABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAACAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMAIwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMAAQAAAAwABAAgAAAABAAEAAEAAABB//8AAABB////wAABAAAAAAAAAAgAEgAAAAEAAAAAAAAAAAAAAAAxAAABAAAAAAABAAEAAQAAMTcBAQAAAAAAAgAeAAMAAQQJAAEAAAAAAAMAAQQJAAIAAgAAAAAAAQAAAAAAAAAAAAAAAAAA')
+       format('truetype');
+}</style></head><body><canvas id="pjs" tabindex="0" width="1000" height="700" style="image-rendering: -webkit-optimize-contrast !important;"></canvas><script language="javascript" type="text/javascript" src="./jquery-1.11.1.min.js"></script><script src="./mousetrap.min(1).js"></script><script language="javascript" type="text/javascript" src="./processing-1.4.8.js"></script><script language="javascript" type="text/javascript" src="./attrchange.js"></script><script language="javascript" type="text/javascript" src="./iframe_giveFocus.js"></script><script language="javascript" type="text/javascript" src="./all_OPextension.js"></script><script language="javascript" type="text/javascript" src="./pjs_OPextension.js"></script><script id="pjsCode" type="application/processing">
+ArrayList<Monster> monsters = new ArrayList<Monster>();
+Lightsaber lightsaber = new Lightsaber();
+Scoreboard  scoreboard = new Scoreboard();
+
+int monsterWidth = 140;
+int monsterHeight = 200;
+int numMonsters = 6;
+int score =0;
+PFont font;
+
+void setup() {
+  size(1000, 700);
+  font = loadFont("Chalkduster-48.vlw");
+  textFont(font);
+  textSize(25);
+  frameRate(30);
+  for (int i=0; i<numMonsters; i++) 
+    createNewMonster();
+}
+  color space = color(17, 45, 78);
+  color mars = color(149, 0, 0);
+  color moon = color(154, 159, 183);
+  color earth = color(0, 152, 197);
+  color land = color(135, 212, 49);
+
+void draw() {
+   	background(space);
+    fill(mars);
+    ellipse(200, 200, 120, 120);
+    fill(moon);
+    ellipse(600, 300, 270, 250);
+    ellipse(620, 250, 100, 100);
+    ellipse(510, 300, 70, 70);
+    ellipse(640, 360, 80, 80);
+    fill(earth);
+    arc(width/2, 700, width, 200, PI, 2*PI);
+    fill(land);
+    ellipse(400, 630, 300, 50);
+    ellipse(700, 670, 200, 50);
+    ellipse(150, 700, 200, 70);
+  lightsaber.weapon(mouseX, mouseY, 0.5);
+
+  for (int i=0; i<monsters.size(); i++) {
+    Monster curMonster = monsters.get(i);
+    curMonster.update();
+   
+    if (curMonster.state==1 && mousePressed&&dist(mouseX, mouseY, curMonster.x, curMonster.y)<monsterHeight/2
+    &&dist(mouseX, mouseY, curMonster.x, curMonster.y)<monsterWidth/2) {
+      curMonster.kill();
+    fill(255, 0, 0);
+    ellipse(20, 20, 20, 20);
+      score ++;
+    }
+  }
+  if (frameCount % 30 == 0 && monsters.size() < 10 ){
+    if(score<15)
+          createNewMonster();
+      if(score>=15 && score<30)
+          levelUpMonster();
+      if(score>=30)
+          finalLevelMonster();
+  }
+    
+  scoreboard.designPanel();
+  showScore();
+}
+
+void showScore() {
+
+  fill(0);
+  text("Score: "+ score, 45, 50);
+}  
+
+void createNewMonster() {
+  int bx=(int)random(monsterWidth/2, width-monsterWidth/2); 
+  int by=(int)random(monsterHeight/2, height-monsterHeight/2); 
+  int sx = (int) random(-5, 5);
+  int sy= (int) random(-5, 5);
+  while (sx==0) sx=(int)random(-5, 5);
+  while (sy==0) sy=(int)random(-5, 5);
+  monsters.add(new Monster(bx, by, sx, sy));
+}
+
+void levelUpMonster(){
+  int bx=(int)random(monsterWidth/2, width-monsterWidth/2); 
+  int by=(int)random(monsterHeight/2, height-monsterHeight/2); 
+  int sx = (int) random(-10, 10);
+  int sy= (int) random(-10, 10);
+  while (sx==0) sx=(int)random(-10, 10);
+  while (sy==0) sy=(int)random(-10, 10);
+  monsters.add(new Monster(bx, by, sx, sy));
+}
+
+void finalLevelMonster(){
+  int bx=(int)random(monsterWidth/2, width-monsterWidth/2); 
+  int by=(int)random(monsterHeight/2, height-monsterHeight/2); 
+  int sx = (int) random(-15, 15);
+  int sy= (int) random(-15, 15);
+  while (sx==0) sx=(int)random(-15, 15);
+  while (sy==0) sy=(int)random(-15, 15);
+  monsters.add(new Monster(bx, by, sx, sy));
+}
+
+class Lightsaber{
+
+color saber = color (249, 166, 80);
+color handle = color (174, 175, 177);
+  
+  void weapon(float x, float y, float s){
+    pushMatrix();
+    translate(x, y);
+    scale(s);
+    fill(saber);
+    rect(0, -300, 20, 250);
+    fill(handle);
+    rect(- 10, -50, 40, 50);
+    rect(- 5, 0, 30, 20);
+    popMatrix();
+  }
+}
+
+class Scoreboard{
+
+color glass = color(189, 239, 254); 
+color body = color(58, 180, 182);
+color bottom = color(176, 176, 176);
+  
+  void designPanel(){
+    fill(glass);
+    arc(100, 70, 160, 130, PI, 2*PI);
+    fill(body);
+    ellipse(100, 70, 180, 50);
+    fill(bottom);
+    ellipse(100, 90, 90, 40);
+  }
+}
+class Monster {
+
+color skin = color(236, 215, 200);
+color headphones = color(228, 12, 50);
+
+//fields
+  int x, y;
+  int speedx, speedy;
+  int state;
+  int deathTimer = -1;
+  float s, r, ds;
+  float rs= 0.5;
+  float d = 0.5;
+  float sc=0.3 ;
+  
+  Monster(int x, int y, int speedx, int speedy) {
+    this.x=x;
+    this.y=y;
+    this.speedx=speedx;
+    this.speedy=speedy;
+    state = 1;
+  }
+
+  void update() {
+    if(state==1){
+      move(); 
+      wallDetect();
+      drawMe(0.5, sc);
+        if(sc <1.5) sc = sc+0.01;
+    }
+    else if(state ==0){
+      drawDyingMe(0.5, r, d);
+        r = r + rs;
+        d = d - ds;
+      if(deathTimer >0)
+        deathTimer--;
+      else
+      monsters.remove(this);
+    }
+  }
+  
+  boolean IsAlive(){
+    if(state == 1) return true;
+    else return false;
+  }
+  
+  void kill(){
+    state = 0;    
+    deathTimer = 30;
+    blood(mouseX, mouseY);
+  }
+  
+  void blood(float x, float y){
+    pushMatrix();
+    translate(x, y);
+    fill(255, 0, 0);
+    ellipse(0, 0, 15, 15);
+    ellipse(10, 10, 30, 20);
+    ellipse(-5, -10, 10, 5);
+    popMatrix();
+  }
+    
+  
+  void wallDetect() {
+    if (x>width+monsterWidth/2) x = -monsterWidth/2;
+    if (x<-monsterWidth/2) x = width +monsterWidth/2;
+    if (y<-monsterHeight/2) y = height + monsterHeight/2;
+    if (y>height +monsterHeight/2) y = -monsterHeight/2;
+  }
+
+  //methods
+  void move() {
+    x+=speedx;
+    y+=speedy;
+  }
+
+  void drawMe(float s, float sc) {
+    //monster
+    pushMatrix();
+    translate(x, y);
+    scale(s);
+    //headphones
+    stroke(headphones);
+    strokeWeight(1);
+    fill(headphones);
+    ellipse(-40, -50, 40, 40);
+    ellipse(40, -50, 40, 40);
+    noFill();
+    strokeWeight(2);
+    arc(0, -60, 100, 100, PI, 2*PI); 
+    //legs
+    stroke(0);
+    strokeWeight(1);
+    noFill();
+    arc(0, 125, 50, 100, PI, 2*PI);
+    fill(0);
+    arc(-30, 130, 15, 15, PI, 2*PI); 
+    arc(30, 130, 15, 15, PI, 2*PI); 
+    //arms
+    stroke(0);
+    noFill();
+    arc(0, 50, 100, 150, PI, 2*PI);
+    //body
+    stroke(0);
+    fill(skin);
+    ellipse(0, 25, 75, 150); 
+    //head
+    stroke(0);
+    fill(skin);
+    ellipse(0, -50, 100, 100);
+    //face
+    stroke(0);
+    fill(0);
+    
+    pushMatrix();
+    translate(0, -50);
+    scale(sc);
+    ellipse(-25, 0, 5, 5);
+    ellipse(25, 0, 5, 5);
+    popMatrix();
+    
+    arc(0, -40, 50, 50, 0, PI);
+    fill(255);
+    rect(-25, -40, 50, 5);
+    popMatrix();
+    }
+    
+    void drawDyingMe(float s, float r, float d){
+    //monster
+    pushMatrix();
+    translate(x, y);
+    scale(s);
+    scale(d);
+    rotate(r);
+    //headphones
+    stroke(headphones);
+    strokeWeight(1);
+    fill(headphones);
+    ellipse(-40, -50, 40, 40);
+    ellipse(40, -50, 40, 40);
+    noFill();
+    strokeWeight(2);
+    arc(0, -60, 100, 100, PI, 2*PI); 
+    //legs
+    stroke(0);
+    strokeWeight(1);
+    noFill();
+    arc(0, 125, 50, 100, PI, 2*PI);
+    fill(0);
+    arc(-30, 130, 15, 15, PI, 2*PI); 
+    arc(30, 130, 15, 15, PI, 2*PI); 
+    //arms
+    stroke(0);
+    noFill();
+    arc(0, 50, 100, 150, PI, 2*PI);
+    //body
+    stroke(0);
+    fill(skin);
+    ellipse(0, 25, 75, 150); 
+    //head
+    stroke(0);
+    fill(skin);
+    ellipse(0, -50, 100, 100);
+    //face
+    stroke(0);
+    fill(0);
+    ellipse(-25, -50, 5, 5);
+    ellipse(25, -50, 5, 5);
+    arc(0, -40, 50, 50, 0, PI);
+    fill(255);
+    rect(-25, -40, 50, 5);
+    popMatrix();
+    }
+}</script><span style="position: absolute; top: 0px; left: 0px; opacity: 0; font-family: PjsEmptyFont, fantasy;">AAAAAAAA</span></body></html>
