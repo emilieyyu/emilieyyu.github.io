@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+contact@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Glegoo);
 body {
@@ -18,6 +18,7 @@ p {
   line-height: 22px;
   font-size: 16px;
   font-weight: 300;
+  text-align: justify;
 }
 
 body {
@@ -65,7 +66,7 @@ a:hover {
 }
 
 .subtitle-des {
-  color: #727272;
+  color: white;
   font-size: 14px;
   margin-bottom: 35px;
   font-weight: 300;
@@ -155,11 +156,11 @@ a:hover {
   text-align: center;
 }
 
-.works-fit {
+.portfolio-fit {
   padding: 40px 0;
 }
 
-.works-fit figure .buttons {
+.portfolio-fit figure .buttons {
   left: 14%;
 }
 
@@ -300,8 +301,8 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#hero-area {
-  background: url("../images/slider.jpg") no-repeat 50%;
+#home {
+  background: url("../images/background.png") no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
   padding: 230px 0;
@@ -310,7 +311,7 @@ a:hover {
   position: relative;
 }
 
-#hero-area:before {
+#home:before {
   content: '';
   z-index: 9;
   background: rgba(255, 255, 255, 0.78);
@@ -321,12 +322,12 @@ a:hover {
   bottom: 0;
 }
 
-#hero-area .block {
+#home .block {
   position: relative;
   z-index: 999;
 }
 
-#hero-area h1 {
+#home h1 {
   font-size: 40px;
   line-height: 50px;
   color: #333;
@@ -335,7 +336,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-#hero-area h2 {
+#home h2 {
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 38px;
@@ -346,7 +347,7 @@ a:hover {
   margin-top: 25px;
 }
 
-#hero-area .btn {
+#home .btn {
   background: #414141;
   border: none;
   color: #fff;
@@ -360,7 +361,7 @@ a:hover {
   border-radius: 0;
 }
 
-#call-to-action {
+#contact {
   background: #02bdd5;
   background-size: cover;
   background-attachment: fixed;
@@ -370,25 +371,25 @@ a:hover {
   color: #fff;
 }
 
-#call-to-action .block {
+#contact .block {
   position: relative;
   z-index: 99;
   color: #fff;
 }
 
-#call-to-action .block h2 {
+#contact .block h2 {
   margin-bottom: 15px;
   color: #fff;
 }
 
-#call-to-action .block p {
+#contact .block p {
   font-size: 15px;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
   margin-top: 20px;
 }
 
-#call-to-action .block .btn-contact {
+#contact .block .btn-contact {
   background: #fff;
   border: none;
   color: #02bdd5;
@@ -400,7 +401,7 @@ a:hover {
   border-radius: 0;
 }
 
-#call-to-action .block .btn-contact i {
+#contact .block .btn-contact i {
   margin-right: 10px;
 }
 
@@ -457,36 +458,36 @@ a:hover {
   background: #00A6BB;
 }
 
-.works {
+.portfolio {
   padding: 80px 0;
   background: #FCFCFC;
 }
 
-.works .block {
+.portfolio .block {
   position: relative;
   z-index: 99;
 }
 
-.works .block:hover .img-overly .overly {
+.portfolio .block:hover .img-overly .overly {
   opacity: 1;
 }
 
-.works .block h4 {
+.portfolio .block h4 {
   padding: 20px 15px;
   margin-top: 0;
   color: #666;
 }
 
-.works .block .img-overly {
+.portfolio .block .img-overly {
   position: relative;
   background: rgba(0, 0, 0, 0.85);
 }
 
-.works .block .img-overly img {
+.portfolio .block .img-overly img {
   border-radius: 0;
 }
 
-.works .block .img-overly .overly {
+.portfolio .block .img-overly .overly {
   background: rgba(57, 181, 74, 0.9);
   position: absolute;
   top: 0;
@@ -497,13 +498,13 @@ a:hover {
   transition: .3s all;
 }
 
-.works .block .img-overly .overly a {
+.portfolio .block .img-overly .overly a {
   position: absolute;
   top: 45%;
   left: 22%;
 }
 
-.works .block .img-overly .overly a i {
+.portfolio .block .img-overly .overly a i {
   font-size: 30px;
   color: #fff;
 }
@@ -602,19 +603,19 @@ figure figcaption p {
   margin-top: 5px;
 }
 
-#feature {
+#skills {
   padding: 80px 0;
 }
 
-#feature .media {
+#skills .media {
   margin: 0px 0 70px 0;
 }
 
-#feature .media .media-left {
+#skills .media .media-left {
   padding-right: 25px;
 }
 
-#feature h3 {
+#skills h3 {
   color: #222222;
   font-size: 18px;
   text-transform: uppercase;
@@ -624,13 +625,13 @@ figure figcaption p {
   font-weight: 400;
 }
 
-#feature p {
+#skills p {
   line-height: 25px;
   font-size: 14px;
   color: #777777;
 }
 
-#feature .icon {
+#skills .icon {
   text-decoration: none;
   color: #fff;
   background-color: #02bdd5;
@@ -1183,7 +1184,7 @@ article {
   line-height: 1.7;
 }
 
-.works.service-page figure .buttons {
+.portfolio.service-page figure .buttons {
   position: absolute;
   top: 45%;
   left: 13%;
@@ -1348,10 +1349,10 @@ px      68    160    252    */
   .navbar-header .navbar-brand a {
     padding: 6px 8px;
   }
-  #hero-area {
+  #home {
     padding: 140px 0;
   }
-  #hero-area .btn {
+  #home .btn {
     margin-top: 8px;
   }
   #about {
@@ -1363,7 +1364,7 @@ px      68    160    252    */
   figure .buttons {
     left: 16%;
   }
-  #feature .media {
+  #skills .media {
     margin: 0px 0px 35px;
   }
   #footer .copyright {
