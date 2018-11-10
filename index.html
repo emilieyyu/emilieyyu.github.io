@@ -33,6 +33,8 @@
         <link rel="stylesheet" href="plugins/facncybox/jquery.fancybox.css">
         <!-- template main css file -->
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
 
@@ -67,7 +69,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#about">About</a></li>
                             <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#interests">Interests</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
@@ -154,70 +156,63 @@ Portfolio Section Start
                 Work Experience. Code Projects. Creative Projects.
             </p>
         </div>
-        <div class="row">
-            <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                    <div class="img-wrapper">
-                        <a href="cloudpbx.html" ><img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title" ></a>
-                    </div>
-                    <figcaption>
-                    <h4>
-                    <a href="#cloudpbx">
-                        CloudPBX Inc.
-                    </a>
-                    </h4>
-                    <p>
-                        Data Monitoring and Collection (Dev/Ops)
-                    </p>
-                    </figcaption>
-                </figure>
+        <!-- The Modal -->
+        <div id="myModal1" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 style="text-align:center">CloudPBX Inc. TEST</h2><br>
+                <img src="./images/dark.png" class="img-responsive img-centered" alt=""><br><br>
+                <p>My first Co-op Work Experience was completed at CloudPBX Inc., a cloud based voice over internet protocol (VoIP) phone company, where phone calls connections are established over the internet, with data being set using IPs instead of telephone lines. It was a memorable experience, giving me the opportunity to really explore in areas that I was familiar with (research) and learn new things in various aspects (command line, virtual servers, database, networking). What I have been able to accomplish in 4 months can be broken down into 4 categories:<br></p>
+                <p>i) research based on given list of software that provide monitoring and alerting features</p>
+                <p>ii) install chosen combinations of software and plugins on test servers</p>
+                <p>iii) based on the top selected combination, write scripts and import data into database to produce graphs and maps showing key performance indicators (KPIs)</p>
+                <p>iv) separate probe and database logic in preparation for production using numerous probes</p><br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="img-wrapper">
-                        <img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title" >
-                        <div class="overlay">
-                            <div class="buttons">
-                                <a rel="gallery" class="fancybox" href="images/portfolio/item-2.jpg">Demo</a>
-                                <a target="_blank" href="single-portfolio.html">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption>
-                    <h4>
-                    <a href="#">
-                        Bottle Mockup
-                    </a>
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit.
-                    </p>
-                    </figcaption>
-                </figure>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+            <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+            <div class="img-wrapper">
+                <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal1"><img src="images/portfolio/cloudpbx.png" class="img-responsive" alt="this is a title" ></button>
             </div>
-            <div class="col-sm-4 col-xs-12">
-                <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <div class="img-wrapper">
-                        <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="" >
-                        <div class="overlay">
-                            <div class="buttons">
-                                <a rel="gallery" class="fancybox" href="images/portfolio/item-3.jpg">Demo</a>
-                                <a target="_blank" href="single-portfolio.html">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <figcaption>
-                    <h4>
-                    <a href="#">
-                        Table Design
-                    </a>
-                    </h4>
-                    <p>
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    </figcaption>
-                </figure>
+            <figcaption>
+                <h4 style="color:#2ae5cd">CloudPBX Inc.</h4>
+                <p>
+                    Data Monitoring and Collection (Dev/Ops)
+                </p>
+            </figcaption>
+            </figure>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal2" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 style="text-align:center">BattleScripts</h2><br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12">
+            <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+            <div class="img-wrapper">
+                <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal2"><img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title" ></button>
+            </div>
+            <figcaption>
+                <h4 style="color:#2ae5cd">BattleScripts</h4>
+                <p>
+                    Multi-player Online Web Browser Game
+                </p>
+            </figcaption>
+            </figure>
+        </div>
+
             <div class="col-sm-4 col-xs-12">
                 <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
                     <div class="img-wrapper">
@@ -294,10 +289,10 @@ Portfolio Section Start
 ==================================================
 Portfolio Section Start
 ================================================== -->
-<section id="skills" class="skills">
+<section id="interests" class="interests">
     <div class="container">
         <div class="section-heading">
-            <h1 class="title wow fadeInDown" data-wow-delay=".3s">Offer From Me</h1>
+            <h1 class="title wow fadeInDown" data-wow-delay=".3s">My Interests & Hobbies</h1>
             <p class="wow fadeInDown" data-wow-delay=".5s">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,<br> quasi dolores numquam dolor vero ex, tempora commodi repellendus quod laborum.
             </p>
@@ -311,7 +306,7 @@ Portfolio Section Start
                         </div>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Media heading</h4>
+                        <h4 class="media-heading">Photography</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                     </div>
                 </div>
@@ -324,7 +319,7 @@ Portfolio Section Start
                         </div>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Well documented.</h4>
+                        <h4 class="media-heading">Travelling</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                     </div>
                 </div>
@@ -337,7 +332,7 @@ Portfolio Section Start
                         </div>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Well documented.</h4>
+                        <h4 class="media-heading">Creative Art</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                     </div>
                 </div>
@@ -350,7 +345,7 @@ Portfolio Section Start
                         </div>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Free updates</h4>
+                        <h4 class="media-heading">Hiking</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                     </div>
                 </div>
@@ -363,7 +358,7 @@ Portfolio Section Start
                         </div>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Solid Support</h4>
+                        <h4 class="media-heading">Swimming</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                     </div>
                 </div>
@@ -376,7 +371,7 @@ Portfolio Section Start
                         </div>
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">Simple Installation</h4>
+                        <h4 class="media-heading">Ice-Skating</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
                     </div>
                 </div>
@@ -396,52 +391,15 @@ Call To Action Section Start
             <div class="col-lg-8 col-lg-offset-2">
                 <div class="block">
                     <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Contact Me</h2>
-                    <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">
-                        Feel free to contact me!
-                    </p>
-                    <div class="contact-form">
-                        <form id="contact-form" method="#" action="#" role="form">
-
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                                <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
-                            </div>
-
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">
-                                <input type="email" placeholder="Your Email" class="form-control" name="email" id="email" >
-                            </div>
-
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                                <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
-                            </div>
-
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
-                                <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
-                            </div>
-
-                            <div id="success" class="success">
-                                Thank you. The Mailman is on His Way :)
-                            </div>
-
-                            <div id="error" class="error">
-                                Sorry, don't know what happened. Try later :(
-                            </div>
-
-                            <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
-                                <input type="submit" id="contact-submit" class="btn btn-default btn-send" value="Send Message">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s" style="text-align: center">
+                        Feel free to contact me at emilieyyu@hotmail.com</p>
 </section>
 
 <!--
 ==================================================
 Footer Section Start
 ================================================== -->
-<footer id="footer">
+<footer id="footer" class="footer">
     <div class="container">
         <div class="col-md-8">
             <p class="copyright">Copyright &copy;
