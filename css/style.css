@@ -215,6 +215,24 @@ a:hover {
   background: #444;
 }
 
+.videowrap{
+    position:relative;
+    width:100%;
+    height:0;
+    padding-bottom:56.27198%;
+    align:center;
+    }
+
+.videowrap iframe{
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
 #top-bar {
   background: #fff;
   color: #fff;
