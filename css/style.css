@@ -1358,9 +1358,9 @@ ul.social-icons li {
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 7%;
     border: 1px solid #888;
-    width: 80%;
+    width: 90%;
 }
 
 .modal-content p {
