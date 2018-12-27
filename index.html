@@ -13,11 +13,12 @@
         <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css">
         <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.css">
         <link rel="stylesheet" href="plugins/facncybox/jquery.fancybox.css">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
 
-        <header id="top-bar" class="navbar-fixed-top animated-header">
+        <header id="top-bar" class="navbar-fixed-top animated-header" style="background-color:#183258;">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,7 +29,7 @@
                     </button>
                     <div class="navbar-brand">
                         <a href="index.html" >
-                            <img src="images/resize.png" alt="">
+                            <img id="logo" src="images/resize.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -50,18 +51,18 @@
     <div class="row">
         <div class="col-md-12 text-center">
             <div class="block wow fadeInUp" data-wow-delay=".3s">
-                <section class="cd-intro">
+                <section class="cd-intro" style ="background-color: transparent;" >
                     <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s" >
-                    <span>HI, MY NAME IS EMILIE</span><br>
+                    <span><div class="typewrite" data-period="2000" data-type='[ "Simplicity, carried to the extreme, becomes elegance.", "There are only 10 types of people in the world:those who understand binary and those who don&#39;t."]'>
+                      <span class="wrap"></span></span>
+                  </div>
                     </span>
                     </h1>
                     </section>
                     <h2 class="wow fadeInUp animated" data-wow-delay=".6s" >
-                        <div class="typewrite" data-period="2000" data-type='[ "There are 10 types of people in the world: those who understand binary and those who do not"]'>
-                          <span class="wrap"></span>
-                      </div>
+                        plan. design. develop. repeat.
                     </h2>
-                    <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s" href="#portfolio" data-section="#portfolio">View My Portfolio</a>
+                    <a style= "background-color: #183258;" class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s" href="#portfolio" data-section="#portfolio">View My Portfolio</a>
                 </div>
             </div>
         </div>
@@ -80,7 +81,7 @@
                         Hello, I am a Computing Science student at Simon Fraser University. As a student with an interest in web development and design, I have taken a variety of courses in graphic design, visual communications, and user interface design.
                     </p>
                     <p>
-                        I have had previous experience working in PostgreSQL, command line, bash scripts, on virtual machines, and various types of probes. My past projects have been completed in Axure, C, C++, CSS, HTML, JavaScript, PHP, Processing, Python, Ruby on Rails, and Unity.
+                        I also had previous experience working in PostgreSQL, command line, bash scripts, on virtual machines, and various types of probes. My past projects have been completed in Axure, C, C++, CSS, HTML, JavaScript, PHP, Processing, Python, Ruby on Rails.
                     </p>
                     <p>
                         While I am a fan of Sherlock and the Harry Potter series, I also enjoy a variety of different activities such as hiking, swimming, or ice-skating.
@@ -101,7 +102,7 @@
     <div class="container">
         <div class="section-heading">
             <h1 class="title wow fadeInDown" data-wow-delay=".3s">Portfolio</h1>
-            <p class="wow fadeInDown" data-wow-delay=".5s">
+            <p style="font-size:16px;"class="wow fadeInDown" data-wow-delay=".5s">
                 Work Experience. Coding & Design Projects.
             </p>
         </div>
@@ -126,7 +127,7 @@
                 <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal1"><img src="images/portfolio/cloudpbx.png" class="img-responsive" alt="this is a title" ></button>
             </div>
             <figcaption>
-                <h4 style="color:#2ae5cd">CloudPBX Inc.</h4>
+                <h4 style="color:#139EEC;">CloudPBX Inc.</h4>
                 <p>
                     Data Monitoring and Collection (Dev/Ops)
                 </p>
@@ -154,7 +155,7 @@
                 <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal2"><img src="images/portfolio/battle.png" class="img-responsive" alt="this is a title" ></button>
             </div>
             <figcaption>
-                <h4 style="color:#2ae5cd">BattleScripts</h4>
+                <h4 style="color:#139EEC;">BattleScripts</h4>
                 <p>
                     Multi-player Online Web Browser Game
                 </p>
@@ -180,7 +181,7 @@
                 <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal3"><img src="images/portfolio/handyman.png" class="img-responsive" alt="this is a title" ></button>
             </div>
             <figcaption>
-                <h4 style="color:#2ae5cd">HandyMan</h4>
+                <h4 style="color:#139EEC;">HandyMan</h4>
                 <p>Mobile Application Prototype for Home Repairs</p>
             </figcaption>
             </figure>
@@ -207,7 +208,7 @@
                 <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal4"><img src="images/portfolio/bookclub.png" class="img-responsive" alt="this is a title" ></button>
             </div>
             <figcaption>
-                <h4 style="color:#2ae5cd">SFU BookClub</h4>
+                <h4 style="color:#139EEC;">SFU BookClub</h4>
                 <p>
                     Sell and Buy Used Textbooks
                 </p>
@@ -234,7 +235,7 @@
                 <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal5"><img src="images/portfolio/cave.jpg" class="img-responsive" alt="this is a title" ></button>
             </div>
             <figcaption>
-                <h4 style="color:#2ae5cd">Mount Monstrosity</h4>
+                <h4 style="color:#139EEC;">Mount Monstrosity</h4>
                 <p>
                     User Interactive Shooting Game
                 </p>
@@ -263,7 +264,7 @@
                 <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal6"><img src="images/portfolio/design.png" class="img-responsive" alt="this is a title" ></button>
             </div>
             <figcaption>
-                <h4 style="color:#2ae5cd">Graphic Design</h4>
+                <h4 style="color:#139EEC;">Graphic Design</h4>
                 <p>
                     Icons, Layouts, Posters
                 </p>
@@ -275,7 +276,7 @@
 <section id="interests" class="interests">
     <div class="container">
         <div class="section-heading">
-            <h1 class="title wow fadeInDown" data-wow-delay=".3s">My Interests & Hobbies</h1>
+            <h1 class="title wow fadeInDown" data-wow-delay=".3s">Interests & Hobbies</h1>
         </div>
 
         <div class="row">
