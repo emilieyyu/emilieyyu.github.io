@@ -153,8 +153,7 @@ $(".fancybox").fancybox({
 
 // set up text to print, each item in array is new line
 var aText = new Array(
-"There are only 10 types of people in the world:",
-"Those who understand binary, and those who don't"
+"plan."," design.","develop.","repeat."
 );
 var iSpeed = 100; // time delay of print out
 var iIndex = 0; // start printing array at this posision
@@ -218,6 +217,6 @@ var TxtType = function(el, toRotate, period) {
         // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
         document.body.appendChild(css);
     };
