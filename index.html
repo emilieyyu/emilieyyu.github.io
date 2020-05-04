@@ -168,7 +168,7 @@
         <div class="section-heading">
             <h2 class="subtitle wow fadeInDown" data-wow-delay=".3s">Portfolio</h2>
             <p style="font-size:16px;"class="wow fadeInDown" data-wow-delay=".5s">
-                Work Experience. Programming & Design Projects.
+                Work Experience.
             </p>
         </div>
 
@@ -191,7 +191,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 col-xs-12">
+        <div class="col-sm-6 col-xs-12">
             <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
             <div class="img-wrapper">
                 <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal1"><img src="images/portfolio/wireless.png" class="img-responsive" alt="this is a title" ></button>
@@ -219,7 +219,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 col-xs-12">
+            <div class="col-sm-6 col-xs-12">
                 <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
                 <div class="img-wrapper">
                     <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal2"><img src="images/portfolio/cloudpbx.png" class="img-responsive" alt="this is a title" ></button>
@@ -232,14 +232,76 @@
                 </figcaption>
                 </figure>
             </div>
+      <p>Programming & Design Projects.</p><br><br>
 
       <div id="myModal3" class="modal">
           <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h2 style="text-align:center">BattleScripts</h2><br>
+              <h2 style="text-align:center">COVID-19</h2><br>
+              <p>Time Series Machine Learning in R<br>The objective is to build a model and predict the next 2 months of coronavirus trends.</p><br>
+              <img src="./images/canada1.png" class="center" >
+              <img src="./images/canada_breakdown.png" class="center" >
+              <p>Raw data set from 01/22/2020 to 04/21/2020<br>Training data set from 02/25/2020 to 04/01/2020<br>
+              Predicting test data set from 04/01/2020 to 04/21/2020<br>Forecasting modelled data set from 04/22/2020 to 06/30/2020</p>
+              <img src="./images/canada2.png" class="center" >
+              <p>Training & Modelling</p><br>
+              <code style="color:#A0A0A0">---Workflow---<br>
+              Preprocessor: Recipe<br>
+              Model: linear_reg()<br>
+              ---Preprocessor---<br>
+              4 Recipe Steps<br>
+              ● step_timeseries_signature()<br>
+              ● step_rm()<br>
+              ● step_rm()<br>
+              ● step_dummy()<br>
+              ---Model---<br>
+              Linear Regression Model Specification (regression)<br>
+              Computational engine: lm</code>
+              <img src="./images/canada3.png" class="center" >
+              <p>Calculating Forecast error<br>
+              <code style="color:#A0A0A0">prediction_tbl %>% metrics(Diff, .pred)<br>
+              # A tibble: 3 x 3<br>
+                .metric    .estimator    .estimate<br>
+                &lt;chr&gt;    &lt;chr&gt;    &lt;dbl&gt;<br>
+              1 rmse    standard    808.<br>
+              2 rsq    standard    0.0758<br>
+              3 mae    standard    625. </code>
+              <img src="./images/canada4.png" class="center" >
+              <img src="./images/canada5.png" class="center" >
+              <img src="./images/canada6.png" class="center" >
+              <p>Comparing Canada with China</p>
+              <img src="./images/comp_diff.png" class="center" >
+              <img src="./images/comp_total.png" class="center" >
+              <p>Reference: <a style = "color: blue;" href="           https://business-science.github.io/timetk/articles/TK03_Forecasting_Using_Time_Series_Signature.html#forecasting-future-data-1" target="_blank">Time Series Machine Learning</a></p>
+              <p>Raw Data (visited 04/21/2020): <a style = "color: blue;" href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases" target="_blank">Dataset</a></p>
+              <p>View Source Code: <a style = "color: blue;" href="https://github.com/emilieyyu/covid19" target="_blank">Github</a></p>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-sm-4 col-xs-12">
+          <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+          <div class="img-wrapper">
+              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal3"><img src="images/portfolio/covid.png" class="img-responsive" alt="this is a title" ></button>
+          </div>
+          <figcaption>
+              <h4 style="color:#139EEC;">Coronavirus 2019</h4>
+              <p>
+                  Machine Learning Data Prediction in R
+              </p>
+          </figcaption>
+          </figure>
+      </div>
+
+      <div id="myModal4" class="modal">
+          <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 style="text-align:center">BattleScript</h2><br>
               <img src="./images/join.png" class="center" ><br><br>
               <img src="./images/interface.png" class="center" ><br><br>
-              <p>Battlescripts is a group project created using HTML, CSS, JS, Laravel PHP framework, Unity, MySQL database, hosted via Google Cloud Platform.</p>
+              <p>Battlescript is a group project created using HTML, CSS, JS, Laravel PHP framework, Unity, MySQL database, hosted via Google Cloud Platform.</p>
               <p>The game introduces coding concepts to players and sharpen their ability to build programs using blocks of logic without having to worry about syntax or typing errors. Players will have to think strategically through the use of various different cards while keeping an eye on their own and their opponent's life points. Players will have the choice of joining a random room, or creating and joining an existing room online.</p>
               <p>Each player will have five cards drawn. The cards are blocks of code which will be added to that player's program. Players take turns drawing and playing cards from a deck, with the choice of executing, storing, or building on each turn. They may strengthen themself, powerup attacks on opponents, or have the option of storing useful blocks of code. <br><br><i>FOO</i> and <i>BAR</i> bars are the life points, and energy points of each player. Everytime the player executes a program, it will consume a certain amount of <i>BAR</i> points for each piece of code added. BAR will be replenished at the start of each turn. Each player starts with zero bugs and when one player overflows the other player's points (either over or under), then their bugs amount will increase by one.</p>
               <p><a style = "color: blue;" href="           https://github.com/emilieyyu/battlescript" target="_blank">View Source Code</a></p>
@@ -252,10 +314,10 @@
       <div class="col-sm-4 col-xs-12">
           <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
           <div class="img-wrapper">
-              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal3"><img src="images/portfolio/battle.png" class="img-responsive" alt="this is a title" ></button>
+              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal4"><img src="images/portfolio/battle.png" class="img-responsive" alt="this is a title" ></button>
           </div>
           <figcaption>
-              <h4 style="color:#139EEC;">BattleScripts</h4>
+              <h4 style="color:#139EEC;">BattleScript</h4>
               <p>
                   Multi-player Online Web Browser Game
               </p>
@@ -263,7 +325,7 @@
           </figure>
       </div>
 
-      <div id="myModal4" class="modal">
+      <div id="myModal5" class="modal">
           <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h2 style="text-align:center">HandyMan Application</h2>
@@ -276,10 +338,10 @@
           </div>
       </div>
 
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-sm-4">
           <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
           <div class="img-wrapper">
-              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal4"><img src="images/portfolio/handyman.png" class="img-responsive" alt="this is a title" ></button>
+              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal5"><img src="images/portfolio/handyman.png" class="img-responsive" alt="this is a title" ></button>
           </div>
           <figcaption>
               <h4 style="color:#139EEC;">HandyMan</h4>
@@ -288,7 +350,7 @@
           </figure>
       </div>
 
-      <div id="myModal5" class="modal">
+      <div id="myModal6" class="modal">
           <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h2 style="text-align:center">SFU BookClub</h2>
@@ -305,10 +367,10 @@
           </div>
       </div>
 
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-sm-4">
           <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
           <div class="img-wrapper">
-              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal5"><img src="images/portfolio/bookclub.png" class="img-responsive" alt="this is a title" ></button>
+              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal6"><img src="images/portfolio/bookclub.png" class="img-responsive" alt="this is a title" ></button>
           </div>
           <figcaption>
               <h4 style="color:#139EEC;">SFU BookClub</h4>
@@ -319,7 +381,7 @@
           </figure>
       </div>
 
-      <div id="myModal6" class="modal">
+      <div id="myModal7" class="modal">
           <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h2 style="text-align:center">Mount Monstrosity</h2><br>
@@ -336,7 +398,7 @@
       <div class="col-sm-4 col-xs-12">
           <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
           <div class="img-wrapper">
-              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal6"><img src="images/portfolio/cave.jpg" class="img-responsive" alt="this is a title" ></button>
+              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal7"><img src="images/portfolio/cave.jpg" class="img-responsive" alt="this is a title" ></button>
           </div>
           <figcaption>
               <h4 style="color:#139EEC;">Mount Monstrosity</h4>
@@ -347,7 +409,7 @@
           </figure>
       </div>
 
-      <div id="myModal7" class="modal">
+      <div id="myModal8" class="modal">
           <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h2 style="text-align:center">Graphic Design</h2>
@@ -362,10 +424,10 @@
           </div>
       </div>
 
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-sm-4">
           <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
           <div class="img-wrapper">
-              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal7"><img src="images/portfolio/design.png" class="img-responsive" alt="this is a title" ></button>
+              <button id="myBtn" type="button" class="btn" data-toggle="modal" data-target="#myModal8"><img src="images/portfolio/design.png" class="img-responsive" alt="this is a title" ></button>
           </div>
           <figcaption>
               <h4 style="color:#139EEC;">Graphic Design</h4>
