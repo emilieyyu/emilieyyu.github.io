@@ -1,222 +1,491 @@
-(function($){
-    $.fn.scrollingTo = function( opts ) {
-        var defaults = {
-            animationTime : 1000,
-            easing : '',
-            callbackBeforeTransition : function(){},
-            callbackAfterTransition : function(){}
-        };
+$(document).ready(function () {
+    "use strict";
 
-        var config = $.extend( {}, defaults, opts );
+    var window_width = $(window).width(),
+        window_height = window.innerHeight,
+        header_height = $(".default-header").height(),
+        header_height_static = $(".site-header.static").outerHeight(),
+        fitscreen = window_height - header_height;
 
-        $(this).click(function(e){
-            var eventVal = e;
-            e.preventDefault();
+    $(".fullscreen").css("height", window_height)
+    $(".fitscreen").css("height", fitscreen);
 
-            var $section = $(document).find( $(this).data('section') );
-            if ( $section.length < 1 ) {
-                return false;
-            };
+    //------- Wow JS Initialized --------//
+    new WOW().init();
 
-            if ( $('html, body').is(':animated') ) {
-                $('html, body').stop( true, true );
-            };
+    //------- Go to Top --------//
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 100) {
+            $('#header1').addClass('header-scrolled1');
+            $('#back-top').addClass('back-top-animation');
+        } else {
+            $('#header1').removeClass('header-scrolled1');
+            $('#back-top').removeClass('back-top-animation');
+        }
+    });
 
-            var scrollPos = $section.offset().top;
+    /* ---------------------------------------------
+        scroll body to 0px on click
+     --------------------------------------------- */
+     $('#back-top a').on("click", function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1000);
+        return false;
+    });
 
-            if ( $(window).scrollTop() == scrollPos ) {
-                return false;
-            };
+    //------- Niceselect  js --------//
 
-            config.callbackBeforeTransition(eventVal, $section);
-
-            $('html, body').animate({
-                'scrollTop' : (scrollPos+'px' )
-            }, config.animationTime, config.easing, function(){
-                config.callbackAfterTransition(eventVal, $section);
-            });
-        });
+    if (document.getElementById("default-select")) {
+        $('select').niceSelect();
+    };
+    if (document.getElementById("service-select")) {
+        $('select').niceSelect();
     };
 
-    /* ========================================================================= */
-    /*   Contact Form Validating
-    /* ========================================================================= */
+    //------- Pre Loader --------//
+    $(window).on('load', function () {
+        $(".preloader-area").delay(200).fadeOut(500);
+    })
 
-    $('#contact-form').validate({
-        rules: {
-            name: {
-                required: true, minlength: 4
-            }
-            , email: {
-                required: true, email: true
-            }
-            , subject: {
-                required: false,
-            }
-            , message: {
-                required: true,
-            }
-            ,
-        }
-        , messages: {
-            user_name: {
-                required: "Please enter your name.", minlength: "Minimum of at least 2 characters"
-            }
-            , email: {
-                required: "Please enter your email address",
-            }
-            , message: {
-                required: "Please enter your message", minlength: "Minimum of at least 2 characters"
-            }
-            ,
-        }
-        , submitHandler: function(form) {
-            $(form).ajaxSubmit( {
-                type:"POST", data: $(form).serialize(), url:"sendmail.php", success: function() {
-                    $('#contact-form #success').fadeIn();
-                }
-                , error: function() {
-                    $('#contact-form #error').fadeIn();
-                }
-            }
-            );
+    //------- Lightbox  js --------//
+    $('.img-gal').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
         }
     });
 
 
-}(jQuery));
+    $('.play-btn').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+
+    //------- Filter  js --------//
+    $(window).on("load", function () {
+        $('.filters ul li').on("click", function () {
+            $('.filters ul li').removeClass('active');
+            $(this).addClass('active');
+
+            var data = $(this).attr('data-filter');
+            $grid.isotope({
+                filter: data
+            })
+        });
 
 
+        if (document.getElementById("work")) {
+            var $grid = $(".grid").isotope({
+                itemSelector: ".all",
+                percentPosition: true,
+                masonry: {
+                    columnWidth: ".all"
+                }
+            })
+        };
+    });
 
-jQuery(document).ready(function(){
-	"use strict";
-	new WOW().init();
+    //------- Accordion  js --------//
 
+    jQuery(document).ready(function ($) {
 
-(function(){
- jQuery('.smooth-scroll').scrollingTo();
-}());
+        if (document.getElementById("accordion")) {
 
-});
+            var accordion_1 = new Accordion(document.getElementById("accordion"), {
+                collapsible: false,
+                slideDuration: 500
+            });
+        }
+    });
 
+    //------- Circle Chart  js --------//
 
+    if (document.getElementById("skills")) {
 
+        $('.skill-1').percentcircle({
+            animate: true,
+            diameter: 400,
+            guage: 5,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: '#988fff',
+            percentSize: '24px',
+            percentWeight: 'normal'
+        });
 
-$(document).ready(function(){
+        $('.skill-2').percentcircle({
+            animate: true,
+            diameter: 400,
+            guage: 5,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: '#988fff',
+            percentSize: '24px',
+            percentWeight: 'normal'
+        });
+
+        $('.skill-3').percentcircle({
+            animate: true,
+            diameter: 400,
+            guage: 5,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: '#988fff',
+            percentSize: '24px',
+            percentWeight: 'normal'
+        });
+
+        $('.skill-4').percentcircle({
+            animate: true,
+            diameter: 400,
+            guage: 5,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: '#988fff',
+            percentSize: '24px',
+            percentWeight: 'normal'
+        });
+
+    };
+
+    //------- Superfist nav menu  js --------//
+
+    $('.nav-menu').superfish({
+        animation: {
+            opacity: 'show'
+        },
+        speed: 400
+    });
+
+    //------- Mobile Nav  js --------//
+
+    if ($('#nav-menu-container').length) {
+        var $mobile_nav = $('#nav-menu-container').clone().prop({
+            id: 'mobile-nav'
+        });
+        $mobile_nav.find('> ul').attr({
+            'class': '',
+            'id': ''
+        });
+        $('body').append($mobile_nav);
+        $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="lnr lnr-menu"></i></button>');
+        $('body').append('<div id="mobile-body-overly"></div>');
+        $('#mobile-nav').find('.menu-has-children').prepend('<i class="lnr lnr-chevron-down"></i>');
+
+        $(document).on('click', '.menu-has-children i', function (e) {
+            $(this).next().toggleClass('menu-item-active');
+            $(this).nextAll('ul').eq(0).slideToggle();
+            $(this).toggleClass("lnr-chevron-up lnr-chevron-down");
+        });
+
+        $(document).on('click', '#mobile-nav-toggle', function (e) {
+            $('body').toggleClass('mobile-nav-active');
+            $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
+            $('#mobile-body-overly').toggle();
+        });
+
+        $(document).click(function (e) {
+            var container = $("#mobile-nav, #mobile-nav-toggle");
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                if ($('body').hasClass('mobile-nav-active')) {
+                    $('body').removeClass('mobile-nav-active');
+                    $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
+                    $('#mobile-body-overly').fadeOut();
+                }
+            }
+        });
+    } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
+        $("#mobile-nav, #mobile-nav-toggle").hide();
+    }
+
+    //------- Smooth Scroll  js --------//
+
+    $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            if (target.length) {
+                var top_space = 0;
+
+                if ($('#header').length) {
+                    top_space = $('#header').outerHeight();
+
+                    if (!$('#header').hasClass('header-fixed')) {
+                        top_space = top_space;
+                    }
+                }
+
+                $('html, body').animate({
+                    scrollTop: target.offset().top - top_space
+                }, 1500, 'easeInOutExpo');
+
+                if ($(this).parents('.nav-menu').length) {
+                    $('.nav-menu .menu-active').removeClass('menu-active');
+                    $(this).closest('li').addClass('menu-active');
+                }
+
+                if ($('body').hasClass('mobile-nav-active')) {
+                    $('body').removeClass('mobile-nav-active');
+                    $('#mobile-nav-toggle i').toggleClass('lnr-times lnr-bars');
+                    $('#mobile-body-overly').fadeOut();
+                }
+                return false;
+            }
+        }
+    });
+
+    $(document).ready(function () {
+
+        $('html, body').hide();
+
+        if (window.location.hash) {
+
+            setTimeout(function () {
+
+                $('html, body').scrollTop(0).show();
+
+                $('html, body').animate({
+
+                    scrollTop: $(window.location.hash).offset().top - 108
+
+                }, 1000)
+
+            }, 0);
+
+        } else {
+
+            $('html, body').show();
+
+        }
+
+    });
+
+    //------- Header Scroll Class  js --------//
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 50) {
-            $(".navbar-brand a").css("color","#fff");
-            $("#top-bar").removeClass("animated-header");
+        if ($(this).scrollTop() > 100) {
+            $('#header').addClass('header-scrolled');
         } else {
-            $(".navbar-brand a").css("color","inherit");
-            $("#top-bar").addClass("animated-header");
+            $('#header').removeClass('header-scrolled');
         }
     });
 
-    $("#clients-logo").owlCarousel({
-
-        itemsCustom : false,
-        pagination : false,
-        items : 5,
-        autoplay: true,
-
-    });
-
-
-});
-
-
-
-// fancybox
-$(".fancybox").fancybox({
-    padding: 0,
-
-    openEffect : 'elastic',
-    openSpeed  : 450,
-
-    closeEffect : 'elastic',
-    closeSpeed  : 350,
-
-    closeClick : true,
-    helpers : {
-        title : {
-            type: 'inside'
-        },
-        overlay : {
-            css : {
-                'background' : 'rgba(0,0,0,0.8)'
+    //------- Owl Carusel  js --------//
+    if($('.active-brand-carusel').length) {
+        $('.active-brand-carusel').owlCarousel({
+            items: 5,
+            loop: true,
+            autoplayHoverPause: true,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 3,
+                },
+                991: {
+                    items: 4,
+                },
+                1024: {
+                    items: 5,
+                }
             }
+        });
+    }
+
+    if ($('.testi_slider').length) {
+        $('.testi_slider').owlCarousel({
+            loop: true,
+            margin: 30,
+            items: 1,
+            nav: true,
+            autoplay: 2500,
+            smartSpeed: 1500,
+            dots: true,
+            responsiveClass: true,
+            navText : ["<i class='lnr lnr-arrow-left'></i>","<i class='lnr lnr-arrow-right'></i>"]
+        })
+    }
+
+    //------- Timer Countdown  js --------//
+
+    if (document.getElementById("count")) {
+
+        var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="count"
+            document.getElementById("count").innerHTML =
+
+                "<div class='col'><span>" + days + "</span><br> Days " + "</div>" + "<div class='col'><span>" + hours + "</span><br> Hours " + "</div>" + "<div class='col'><span>" + minutes + "</span><br> Minutes " + "</div>" + "<div class='col'><span>" + seconds + "</span><br> Seconds </div>";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("count").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+    }
+
+    //------- Google Map  js --------//
+
+    if (document.getElementById("map")) {
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            var mapOptions = {
+                zoom: 11,
+                center: new google.maps.LatLng(40.6700, -73.9400), // New York
+                styles: [{
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#e9e9e9"
+                    }, {
+                        "lightness": 17
+                    }]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#f5f5f5"
+                    }, {
+                        "lightness": 20
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#ffffff"
+                    }, {
+                        "lightness": 17
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#ffffff"
+                    }, {
+                        "lightness": 29
+                    }, {
+                        "weight": 0.2
+                    }]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#ffffff"
+                    }, {
+                        "lightness": 18
+                    }]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#ffffff"
+                    }, {
+                        "lightness": 16
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#f5f5f5"
+                    }, {
+                        "lightness": 21
+                    }]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#dedede"
+                    }, {
+                        "lightness": 21
+                    }]
+                }, {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "visibility": "on"
+                    }, {
+                        "color": "#ffffff"
+                    }, {
+                        "lightness": 16
+                    }]
+                }, {
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "saturation": 36
+                    }, {
+                        "color": "#333333"
+                    }, {
+                        "lightness": 40
+                    }]
+                }, {
+                    "elementType": "labels.icon",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#f2f2f2"
+                    }, {
+                        "lightness": 19
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#fefefe"
+                    }, {
+                        "lightness": 20
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#fefefe"
+                    }, {
+                        "lightness": 17
+                    }, {
+                        "weight": 1.2
+                    }]
+                }]
+            };
+            var mapElement = document.getElementById('map');
+            var map = new google.maps.Map(mapElement, mapOptions);
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.6700, -73.9400),
+                map: map,
+                title: 'Snazzy!'
+            });
         }
     }
+
+    //------- Mailchimp js --------//
+
+    // $(document).ready(function () {
+    //     $('#mc_embed_signup').find('form').ajaxChimp();
+    // });
+
 });
-
-// set up text to print, each item in array is new line
-var aText = new Array(
-"plan."," design.","develop.","repeat."
-);
-var iSpeed = 100; // time delay of print out
-var iIndex = 0; // start printing array at this posision
-var iArrLength = aText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
-
-var iTextPos = 0; // initialise text position
-var sContents = ''; // initialise contents variable
-var iRow; // initialise current row
-
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 150 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
-        document.body.appendChild(css);
-    };
