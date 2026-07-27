@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, MapPin, Calendar, Mountain, ChevronLeft, ChevronRight } from 'lucide-react';
 import hikesData from '../data/hikes.json';
 
-// Placeholder key - user will need to replace this
-mapboxgl.accessToken = 'pk.eyJ1IjoiZW1pbGlleXl1IiwiYSI6ImNtbXY2cmI5eDJmNWcycW9tOWhtNWU5dHMifQ.q2ZdUwh4erArkc6VSq-TiA';
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
 export default function HikesMap() {
     const mapContainer = useRef(null);
