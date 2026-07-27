@@ -1,0 +1,148 @@
+[
+    {
+        "id": 3,
+        "location": "Spain & Portugal",
+        "country": "Europe",
+        "date": "2026",
+        "coverImageUrl": "/images/travel/spain%20+%20portugal/20260617_172412.jpg",
+        "previewImages": [
+            "/images/travel/spain%20+%20portugal/20260616_102337.jpg",
+            "/images/travel/spain%20+%20portugal/20260617_172412.jpg"
+        ],
+        "images": [
+            "/images/travel/spain%20+%20portugal/20260615_193351.jpg",
+            "/images/travel/spain%20+%20portugal/20260616_100927.jpg",
+            "/images/travel/spain%20+%20portugal/20260616_102337.jpg",
+            "/images/travel/spain%20+%20portugal/20260617_080540.jpg",
+            "/images/travel/spain%20+%20portugal/20260617_090710.jpg",
+            "/images/travel/spain%20+%20portugal/20260617_112532.jpg",
+            "/images/travel/spain%20+%20portugal/20260617_172412.jpg",
+            "/images/travel/spain%20+%20portugal/20260618_090243.jpg",
+            "/images/travel/spain%20+%20portugal/20260618_090731.jpg",
+            "/images/travel/spain%20+%20portugal/20260618_092052.jpg",
+            "/images/travel/spain%20+%20portugal/20260620_210202.jpg"
+        ],
+        "description": "Coastal cliffs, historic cities, and long golden evenings across the Iberian Peninsula."
+    },
+    {
+        "id": 4,
+        "location": "New York City",
+        "country": "USA",
+        "date": "2026",
+        "coverImageUrl": "/images/travel/new%20york/20260309_114408.jpg",
+        "previewImages": [
+            "/images/travel/new%20york/20260309_114408.jpg",
+            "/images/travel/new%20york/20260311_194630.jpg"
+        ],
+        "images": [
+            "/images/travel/new%20york/20260308_192323.jpg",
+            "/images/travel/new%20york/20260309_111634.jpg",
+            "/images/travel/new%20york/20260309_114408.jpg",
+            "/images/travel/new%20york/20260310_194126.jpg",
+            "/images/travel/new%20york/20260311_121806.jpg",
+            "/images/travel/new%20york/20260311_153920.jpg",
+            "/images/travel/new%20york/20260311_155413.jpg",
+            "/images/travel/new%20york/20260311_181858.jpg",
+            "/images/travel/new%20york/20260311_182054.jpg",
+            "/images/travel/new%20york/20260311_185430.jpg",
+            "/images/travel/new%20york/20260311_190410.jpg",
+            "/images/travel/new%20york/20260311_194630.jpg"
+        ],
+        "description": "The concrete jungle. Bustling streets, towering skyscrapers, and endless kinetic energy."
+    },
+    {
+        "id": 1,
+        "location": "Utah & Arizona",
+        "country": "USA",
+        "date": "2025",
+        "coverImageUrl": "/images/travel/utah/20250617_141218.jpg",
+        "previewImages": [
+            "/images/travel/utah/20250617_110846.jpg",
+            "/images/travel/utah/20250617_141218.jpg",
+            "/images/travel/utah/20250617_190837.jpg",
+            "/images/travel/utah/20250618_093659.jpg"
+        ],
+        "images": [
+            "/images/travel/utah/20250616_162724.jpg",
+            "/images/travel/utah/20250617_110846.jpg",
+            "/images/travel/utah/20250617_141218.jpg",
+            "/images/travel/utah/20250617_190352.jpg",
+            "/images/travel/utah/20250617_190837.jpg",
+            "/images/travel/utah/20250617_193938.jpg",
+            "/images/travel/utah/20250618_093659.jpg",
+            "/images/travel/utah/20250618_094427.jpg",
+            "/images/travel/utah/20250618_095743.jpg"
+        ],
+        "description": "Red rocks, sprawling deserts, and echoing canyons."
+    },
+    {
+        "id": 2,
+        "location": "Chengdu & Chongqing",
+        "country": "China",
+        "date": "2024",
+        "coverImageUrl": "/images/travel/chengdu%20+%20chongqing/PXL_20240415_120751610.LONG_EXPOSURE-01.COVER.jpg",
+        "previewImages": [
+            "/images/travel/chengdu%20+%20chongqing/PXL_20240415_120751610.LONG_EXPOSURE-01.COVER.jpg",
+            "/images/travel/chengdu%20+%20chongqing/chongqing2.jpg",
+            "/images/travel/chengdu%20+%20chongqing/chonging1.jpg",
+            "/images/travel/chengdu%20+%20chongqing/mmexport1713740965917.jpg"
+        ],
+        "images": [
+            "/images/travel/chengdu%20+%20chongqing/PXL_20240415_120751610.LONG_EXPOSURE-01.COVER.jpg",
+            "/images/travel/chengdu%20+%20chongqing/chongqing2.jpg",
+            "/images/travel/chengdu%20+%20chongqing/PXL_20240416_051004700.jpg",
+            "/images/travel/chengdu%20+%20chongqing/PXL_20240418_015259966.PORTRAIT.ORIGINAL.jpg",
+            "/images/travel/chengdu%20+%20chongqing/chonging1.jpg",
+            "/images/travel/chengdu%20+%20chongqing/mmexport1713740965917.jpg",
+            "/images/travel/chengdu%20+%20chongqing/mmexport1713741030850.jpg"
+        ],
+        "description": "Giant pandas and tea culture in Chengdu, paired with Chongqing's spicy hotpot and multi-level mountain cityscapes."
+    },
+    {
+        "id": 5,
+        "location": "Oregon Coast & Central",
+        "country": "USA",
+        "date": "2024",
+        "coverImageUrl": "/images/travel/oregon/mmexport1785043099409.jpg",
+        "previewImages": [
+            "/images/travel/oregon/mmexport1785043082540.jpg",
+            "/images/travel/oregon/mmexport1785043091344.jpg",
+            "/images/travel/oregon/mmexport1785043099409.jpg",
+            "/images/travel/oregon/mmexport1785043103045.jpg"
+        ],
+        "images": [
+            "/images/travel/oregon/mmexport1785043023768.jpg",
+            "/images/travel/oregon/mmexport1785043028468.jpg",
+            "/images/travel/oregon/mmexport1785043039885.jpg",
+            "/images/travel/oregon/mmexport1785043043839.jpg",
+            "/images/travel/oregon/mmexport1785043082540.jpg",
+            "/images/travel/oregon/mmexport1785043087163.jpg",
+            "/images/travel/oregon/mmexport1785043091344.jpg",
+            "/images/travel/oregon/mmexport1785043094584.jpg",
+            "/images/travel/oregon/mmexport1785043099409.jpg",
+            "/images/travel/oregon/mmexport1785043103045.jpg"
+        ],
+        "description": "A journey through Thor's Well, Smith Rock, the Painted Hills, Cannon Beach, and countless lush waterfalls."
+    },
+    {
+        "id": 6,
+        "location": "Wells Gray Provincial Park",
+        "country": "Canada",
+        "date": "2022",
+        "coverImageUrl": "/images/travel/wellsgray/mmexport1785043111643.jpg",
+        "previewImages": [
+            "/images/travel/wellsgray/mmexport1785043111643.jpg",
+            "/images/travel/wellsgray/mmexport1785043115257.jpg",
+            "/images/travel/wellsgray/mmexport1785043126387.jpg"
+        ],
+        "images": [
+            "/images/travel/wellsgray/mmexport1785043111643.jpg",
+            "/images/travel/wellsgray/mmexport1785043115257.jpg",
+            "/images/travel/wellsgray/mmexport1785043118704.jpg",
+            "/images/travel/wellsgray/mmexport1785043121926.jpg",
+            "/images/travel/wellsgray/mmexport1785043126387.jpg",
+            "/images/travel/wellsgray/wellsgray1.jpg"
+        ],
+        "description": "Exploring the famous waterfall park of British Columbia, including Helmcken Falls."
+    }
+]

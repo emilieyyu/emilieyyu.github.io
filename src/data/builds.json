@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "title": "Notre Dame",
+        "category": "Metal",
+        "imageUrl": "/images/builds/metal1.jpg",
+        "description": "A laser-cut steel replica of the cathedral, built piece by tiny piece with a pair of tweezers."
+    },
+    {
+        "id": 2,
+        "title": "Queen Anne's Revenge",
+        "category": "Metal",
+        "imageUrl": "/images/builds/metal2.jpg",
+        "description": "Blackbeard's flagship in miniature — rigging included, patience required."
+    },
+    {
+        "id": 3,
+        "title": "Syndey Opera House",
+        "category": "Metal",
+        "imageUrl": "/images/builds/metal3.jpg",
+        "description": "Every curved shell panel bent and slotted together from a single steel sheet."
+    },
+    {
+        "id": 4,
+        "title": "Negato Battleship",
+        "category": "Metal",
+        "imageUrl": "/images/builds/metal4.jpg",
+        "description": "A dense little warship build, full of gun turrets no bigger than a grain of rice."
+    },
+    {
+        "id": 5,
+        "title": "Vitascope Film Projector",
+        "category": "Wood",
+        "imageUrl": "/images/builds/wood1.jpg",
+        "description": "A hand-cranked wooden mechanical model — gears, film reel, and all, actually functional."
+    },
+    {
+        "id": 8,
+        "title": "Toshiro",
+        "category": "Sketches",
+        "imageUrl": "/images/builds/art1.jpg",
+        "description": "Quick sketch of Toshiro Hitsugaya, tenth captain from Bleach."
+    },
+    {
+        "id": 9,
+        "title": "Expression Studies",
+        "category": "Sketches",
+        "imageUrl": "/images/builds/art2.jpg",
+        "description": "Three faces, three moods — practicing expression from imagination."
+    },
+    {
+        "id": 10,
+        "title": "Wandering Robots",
+        "category": "Sketches",
+        "imageUrl": "/images/builds/art3.jpg",
+        "description": "Pen doodles of a couple of rusty, road-worn robot travelers."
+    },
+    {
+        "id": 6,
+        "title": "Lakeside Adirondacks",
+        "category": "Sketches",
+        "imageUrl": "/images/builds/paint1.jpg",
+        "description": "Two empty chairs and a still lake."
+    },
+    {
+        "id": 7,
+        "title": "Boats at Anchor",
+        "category": "Sketches",
+        "imageUrl": "/images/builds/paint2.jpg",
+        "description": "A lineup of little rowboats against a backdrop of snow-capped peaks."
+    }
+]

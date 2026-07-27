@@ -1,0 +1,292 @@
+[
+    {
+        "id": 1,
+        "name": "Cascade Pass",
+        "coordinates": [
+            -121.056,
+            48.468
+        ],
+        "date": "September 2025",
+        "distance": "7.4 miles",
+        "elevation": "1,700 ft gain",
+        "difficulty": "Moderate",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/cascade1.jpg",
+        "images": [
+            "/images/hikes/cascade1.jpg",
+            "/images/hikes/cascade2.jpg"
+        ],
+        "description": "Stunning glaciated peaks and fall colors. A classic North Cascades experience."
+    },
+    {
+        "id": 2,
+        "name": "Dog Mountain",
+        "coordinates": [
+            -121.706,
+            45.698
+        ],
+        "date": "May 2025",
+        "distance": "6.0 miles",
+        "elevation": "2,800 ft gain",
+        "difficulty": "Hard",
+        "trailType": "Loop",
+        "thumbnail": "/images/hikes/dogmountain1.jpg",
+        "images": [
+            "/images/hikes/dogmountain1.jpg"
+        ],
+        "description": "Steep constant climb rewarded with sprawling views of the Columbia River Gorge and spring wildflowers."
+    },
+    {
+        "id": 3,
+        "name": "Lake Ingalls",
+        "coordinates": [
+            -120.938,
+            47.469
+        ],
+        "date": "July 2025",
+        "distance": "9.0 miles",
+        "elevation": "2,500 ft gain",
+        "difficulty": "Moderate-Hard",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/ingalls1.jpg",
+        "images": [
+            "/images/hikes/ingalls1.jpg"
+        ],
+        "description": "A beautiful rocky climb leading to a stunning alpine lake with front-row views of Mt. Stuart."
+    },
+    {
+        "id": 4,
+        "name": "Mailbox Peak",
+        "coordinates": [
+            -121.65,
+            47.466
+        ],
+        "date": "May 2025",
+        "distance": "9.4 miles",
+        "elevation": "4,000 ft gain",
+        "difficulty": "Hard",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/mailbox1.jpg",
+        "images": [
+            "/images/hikes/mailbox1.jpg",
+            "/images/hikes/mailbox2.jpg"
+        ],
+        "description": "A notorious conditioning hike. A relentless uphill slog culminating at a literal mailbox covered in stickers."
+    },
+    {
+        "id": 5,
+        "name": "Maple Pass",
+        "coordinates": [
+            -120.735,
+            48.514
+        ],
+        "date": "July 2025",
+        "distance": "7.2 miles",
+        "elevation": "2,000 ft gain",
+        "difficulty": "Moderate-Hard",
+        "trailType": "Loop",
+        "thumbnail": "/images/hikes/maplepass1.jpg",
+        "images": [
+            "/images/hikes/maplepass1.jpg",
+            "/images/hikes/maplepass2.jpg",
+            "/images/hikes/maplepass3.jpg",
+            "/images/hikes/maplepass4.jpg"
+        ],
+        "description": "An incredible loop on high ridges offering panoramic views of the rugged North Cascades."
+    },
+    {
+        "id": 6,
+        "name": "Mt Pilchuck",
+        "coordinates": [
+            -121.796,
+            48.058
+        ],
+        "date": "July 2025",
+        "distance": "5.4 miles",
+        "elevation": "2,300 ft gain",
+        "difficulty": "Moderate",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/pilchuck1.jpg",
+        "images": [
+            "/images/hikes/pilchuck1.jpg",
+            "/images/hikes/pilchuck2.jpg"
+        ],
+        "description": "A very popular and rocky day hike leading to an iconic fire lookout with 360-degree views."
+    },
+    {
+        "id": 7,
+        "name": "Mt Rainier Summit",
+        "coordinates": [
+            -121.7603,
+            46.8523
+        ],
+        "date": "August 2025",
+        "distance": "14.7 miles",
+        "elevation": "9,000 ft gain",
+        "difficulty": "Extreme",
+        "trailType": "Glaciated / Out-and-Back",
+        "thumbnail": "/images/hikes/rainer1.jpg",
+        "images": [
+            "/images/hikes/rainer1.jpg",
+            "/images/hikes/rainer2.jpg",
+            "/images/hikes/rainer3.jpg",
+            "/images/hikes/rainer4.jpg"
+        ],
+        "description": "A grueling push through the Disappointment Cleaver route. Started at 11 PM for a sunrise summit."
+    },
+    {
+        "id": 8,
+        "name": "St. Mark's Summit",
+        "coordinates": [
+            -123.193,
+            49.395
+        ],
+        "date": "July 2020",
+        "distance": "6.8 miles",
+        "elevation": "1,500 ft gain",
+        "difficulty": "Moderate",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/stmark.jpg",
+        "images": [
+            "/images/hikes/stmark.jpg"
+        ],
+        "description": "Gorgeous views of Howe Sound from the peaks above West Vancouver. A classic section of the Howe Sound Crest Trail."
+    },
+    {
+        "id": 9,
+        "name": "Panorama Ridge + Garibaldi Lake",
+        "coordinates": [
+            -123.01389,
+            49.95389
+        ],
+        "date": "August 2023",
+        "distance": "18.6 miles",
+        "elevation": "6,998 ft gain",
+        "difficulty": "Hard",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/panorama1.jpg",
+        "images": [
+            "/images/hikes/panorama1.jpg",
+            "/images/hikes/panorama2.jpg",
+            "/images/hikes/panorama3.jpg",
+            "/images/hikes/garabaldi1.jpg",
+            "/images/hikes/garabaldi2.jpg"
+        ],
+        "description": "An epic long day featuring impossibly blue glacial water and soaring coastal mountain views."
+    },
+    {
+        "id": 10,
+        "name": "Wells Gray National Park",
+        "coordinates": [
+            -120,
+            52
+        ],
+        "date": "September 2022",
+        "distance": "TBD",
+        "elevation": "TBD",
+        "difficulty": "Varied",
+        "trailType": "Exploration",
+        "thumbnail": "/images/travel/wellsgray/mmexport1785043111643.jpg",
+        "images": [
+            "/images/travel/wellsgray/mmexport1785043111643.jpg",
+            "/images/travel/wellsgray/mmexport1785043115257.jpg",
+            "/images/travel/wellsgray/mmexport1785043118704.jpg",
+            "/images/travel/wellsgray/mmexport1785043121926.jpg",
+            "/images/travel/wellsgray/mmexport1785043126387.jpg",
+            "/images/travel/wellsgray/wellsgray1.jpg"
+        ],
+        "description": "Exploring the famous waterfall park of British Columbia, including Helmcken Falls."
+    },
+    {
+        "id": 12,
+        "name": "Grouse Mountain",
+        "coordinates": [
+            -123.08,
+            49.38
+        ],
+        "date": "June 2019",
+        "distance": "1.8 miles",
+        "elevation": "2,800 ft gain",
+        "difficulty": "Hard",
+        "trailType": "Point-to-Point",
+        "thumbnail": "/images/hikes/grouse.jpg",
+        "images": [
+            "/images/hikes/grouse.jpg"
+        ],
+        "description": "Mother Nature's Stairmaster. Straight up the mountain with burning lungs and quivering legs."
+    },
+    {
+        "id": 13,
+        "name": "Sea to Sky",
+        "coordinates": [
+            -123.15,
+            49.68
+        ],
+        "date": "July 2019",
+        "distance": "4.6 miles",
+        "elevation": "2,800 ft gain",
+        "difficulty": "Hard",
+        "trailType": "Point-to-Point",
+        "thumbnail": "/images/hikes/sea2sky.jpg",
+        "images": [
+            "/images/hikes/sea2sky.jpg"
+        ],
+        "description": "A punishing climb up a forested mountainside, rewarded with expansive views of Howe Sound at the gondola summit."
+    },
+    {
+        "id": 14,
+        "name": "Stawamus Chief",
+        "coordinates": [
+            -123.14,
+            49.68
+        ],
+        "date": "September 2020",
+        "distance": "3.5 miles",
+        "elevation": "1,900 ft gain",
+        "difficulty": "Hard",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/chief.jpg",
+        "images": [
+            "/images/hikes/chief.jpg"
+        ],
+        "description": "A legendary granite monolith in Squamish. Lots of stairs, chains, and ladders to reach the breathtaking summit."
+    },
+    {
+        "id": 15,
+        "name": "Wedgemount Lake",
+        "coordinates": [
+            -122.417,
+            50.134
+        ],
+        "date": "August 2026",
+        "distance": "8.7 miles",
+        "elevation": "3,600 ft gain",
+        "difficulty": "Hard",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/wedgemount2.jpg",
+        "images": [
+            "/images/hikes/wedgemount2.jpg",
+            "/images/hikes/wedgemount1.jpg"
+        ],
+        "description": "A relentless climb through old-growth forest to an impossibly blue glacial lake beneath Wedge Mountain."
+    },
+    {
+        "id": 17,
+        "name": "Rattlesnake Ledge",
+        "coordinates": [
+            -121.785,
+            47.433
+        ],
+        "date": "June 2025",
+        "distance": "5.3 miles",
+        "elevation": "1,160 ft gain",
+        "difficulty": "Moderate",
+        "trailType": "Out-and-Back",
+        "thumbnail": "/images/hikes/rattlesnake1.jpg",
+        "images": [
+            "/images/hikes/rattlesnake1.jpg",
+            "/images/hikes/rattlesnake2.jpg"
+        ],
+        "description": ""
+    }
+]

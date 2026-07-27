@@ -1,0 +1,87 @@
+{
+    "experience": [
+        {
+            "company": "Thomson Reuters",
+            "role": "Senior Solutions Engineer",
+            "dates": "Nov 2023 - Present",
+            "bullets": [
+                "Lead technical implementations for CoCounsel, a generative AI legal assistant, supporting enterprise deployments across major law firms and government agencies.",
+                "Manage 30–40 enterprise datasets (up to 700K documents each) for clients including Cravath LLP and the U.S. Department of Justice.",
+                "Built and prepared demos and POC environments for pre-sales trials and post-sale onboarding, covering legal research and document analysis workflows.",
+                "Developed an internal Python CLI to provision and migrate datasets from legacy environments, reducing demo setup time by ~50%."
+            ]
+        },
+        {
+            "company": "Casetext",
+            "role": "Solutions Engineer",
+            "dates": "Jun 2022 - Nov 2023",
+            "bullets": [
+                "Primary technical point of contact for enterprise customers including Am Law 100 firms; scoping onboarding requirements and supporting AI-assisted document analysis workflows.",
+                "Built Python tooling and CLI utilities for dataset ingestion and platform integrations; processed 1M+ legal documents (120GB) through ingestion pipelines.",
+                "Led SSO integrations and REST API-based onboarding for enterprise clients, bridging customer IT teams with internal engineering."
+            ]
+        },
+        {
+            "company": "ActiveState Software Inc.",
+            "role": "Build Engineer",
+            "dates": "Sep 2020 - Jun 2022",
+            "bullets": [
+                "Developed CI/CD pipelines using AWS, Docker, and CircleCI to build and distribute enterprise Python environments.",
+                "Created an open-source installation scanning tool used to collect telemetry for product and sales teams.",
+                "Reduced build failures by 50% through improved dependency management and automated validation."
+            ]
+        },
+        {
+            "company": "Sierra Wireless Inc.",
+            "role": "Software Test Engineer",
+            "dates": "May - Dec 2019",
+            "bullets": [
+                "Increased testing productivity 120% by developing Python and C# automation scripts for firmware upgrades and module testing.",
+                "Conducted automated and manual testing across multiple operating systems."
+            ]
+        },
+        {
+            "company": "CloudPBX Inc.",
+            "role": "DevOps",
+            "dates": "Sep - Dec 2017",
+            "bullets": [
+                "Installed and configured 6+ monitoring and metrics tools on DigitalOcean Ubuntu servers.",
+                "Developed Bash scripts for traceroute/mtr tests, importing CSVs into PostgreSQL for analysis."
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "category": "Languages",
+            "tags": [
+                "Python",
+                "Bash",
+                "C#",
+                "C/C++",
+                "HTML/CSS"
+            ]
+        },
+        {
+            "category": "Cloud & Tools",
+            "tags": [
+                "AWS",
+                "GCP",
+                "Docker",
+                "Git/GitHub",
+                "Azure DevOps",
+                "CircleCI"
+            ]
+        },
+        {
+            "category": "Databases & AI",
+            "tags": [
+                "PostgreSQL",
+                "SQL Server",
+                "Copilot",
+                "ChatGPT",
+                "Claude",
+                "Cursor"
+            ]
+        }
+    ]
+}
